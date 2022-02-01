@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KtorClientSample</string>
+    <string name="contact_header">Contacts</string>
 </resources>

@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlinx-serialization'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -30,6 +31,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -44,6 +48,7 @@ dependencies {
 
     // Ktor-Client
     def ktor_version = "1.6.0"
+    implementation "io.ktor:ktor-client-serialization:$ktor_version"
     implementation "io.ktor:ktor-client-core:$ktor_version"
     implementation "io.ktor:ktor-client-cio:$ktor_version"
     implementation "io.ktor:ktor-client-logging:$ktor_version"
